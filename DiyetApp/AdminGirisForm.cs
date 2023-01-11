@@ -45,5 +45,12 @@ namespace DiyetApp
                 return;
             }
         }
+
+        private void btnGeri_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            var frm = new GirisForm();
+            DialogResult dr = frm.ShowDialog();
+        }
     }
 }

@@ -90,6 +90,15 @@ namespace DiyetApp
             string yemekAd = lstbYemekler.GetItemText(lstbYemekler.SelectedItem);
 
             dgvYemekler.DataSource = _db.BesinPorsiyonlar.Where(x => x.Ad == yemekAd).ToList();
+
+            foreach(DataGridViewColumn column in dgvYemekler.Columns)
+            {
+                column.Visible = false;
+            }
+
+            dgvYemekler.Columns["Ad"].Visible = false;
+            dgvYemekler.Columns["Kalori"].Visible = false;
+            dgvYemekler.Columns["KategoriId"].Visible = false;
         }
 
         private void dtZaman_ValueChanged(object sender, EventArgs e)

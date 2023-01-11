@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RaporForm));
             this.label1 = new System.Windows.Forms.Label();
             this.btnGeri = new System.Windows.Forms.Button();
             this.dtZaman = new System.Windows.Forms.DateTimePicker();
@@ -58,41 +59,46 @@
             // 
             // btnGeri
             // 
-            this.btnGeri.Location = new System.Drawing.Point(869, 524);
+            this.btnGeri.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnGeri.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGeri.BackgroundImage")));
+            this.btnGeri.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGeri.Location = new System.Drawing.Point(869, 479);
             this.btnGeri.Name = "btnGeri";
-            this.btnGeri.Size = new System.Drawing.Size(89, 33);
-            this.btnGeri.TabIndex = 15;
-            this.btnGeri.Text = "GERİ";
-            this.btnGeri.UseVisualStyleBackColor = true;
+            this.btnGeri.Size = new System.Drawing.Size(89, 78);
+            this.btnGeri.TabIndex = 2;
+            this.btnGeri.UseVisualStyleBackColor = false;
             this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
             // 
             // dtZaman
             // 
             this.dtZaman.CalendarTitleBackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dtZaman.Location = new System.Drawing.Point(227, 13);
+            this.dtZaman.Location = new System.Drawing.Point(279, 15);
             this.dtZaman.Name = "dtZaman";
             this.dtZaman.Size = new System.Drawing.Size(219, 29);
-            this.dtZaman.TabIndex = 16;
+            this.dtZaman.TabIndex = 0;
             this.dtZaman.ValueChanged += new System.EventHandler(this.dtZaman_ValueChanged);
             // 
             // dgvYemekler
             // 
             this.dgvYemekler.AllowUserToAddRows = false;
             this.dgvYemekler.AllowUserToDeleteRows = false;
-            this.dgvYemekler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvYemekler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvYemekler.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvYemekler.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvYemekler.BackgroundColor = System.Drawing.Color.White;
             this.dgvYemekler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvYemekler.Location = new System.Drawing.Point(152, 82);
+            this.dgvYemekler.MultiSelect = false;
             this.dgvYemekler.Name = "dgvYemekler";
             this.dgvYemekler.ReadOnly = true;
+            this.dgvYemekler.RowHeadersWidth = 51;
             this.dgvYemekler.RowTemplate.Height = 25;
+            this.dgvYemekler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvYemekler.Size = new System.Drawing.Size(302, 298);
-            this.dgvYemekler.TabIndex = 18;
+            this.dgvYemekler.TabIndex = 2;
             // 
             // lblRapor
             // 
-            this.lblRapor.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblRapor.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblRapor.Location = new System.Drawing.Point(6, 404);
             this.lblRapor.Name = "lblRapor";
             this.lblRapor.Size = new System.Drawing.Size(448, 68);
@@ -103,9 +109,9 @@
             // pgbHedef
             // 
             this.pgbHedef.ForeColor = System.Drawing.Color.Turquoise;
-            this.pgbHedef.Location = new System.Drawing.Point(617, 220);
+            this.pgbHedef.Location = new System.Drawing.Point(664, 220);
             this.pgbHedef.Name = "pgbHedef";
-            this.pgbHedef.Size = new System.Drawing.Size(341, 47);
+            this.pgbHedef.Size = new System.Drawing.Size(294, 47);
             this.pgbHedef.TabIndex = 20;
             // 
             // groupBox1
@@ -116,9 +122,9 @@
             this.groupBox1.Location = new System.Drawing.Point(20, 75);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(460, 482);
-            this.groupBox1.TabIndex = 21;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Raporlar";
             // 
             // lstbYemekler
             // 
@@ -128,31 +134,35 @@
             this.lstbYemekler.Location = new System.Drawing.Point(6, 82);
             this.lstbYemekler.Name = "lstbYemekler";
             this.lstbYemekler.Size = new System.Drawing.Size(140, 298);
-            this.lstbYemekler.TabIndex = 20;
+            this.lstbYemekler.TabIndex = 1;
             this.lstbYemekler.SelectedIndexChanged += new System.EventHandler(this.lstbYemekler_SelectedIndexChanged);
             // 
             // pgbYapilan
             // 
-            this.pgbYapilan.Location = new System.Drawing.Point(617, 304);
+            this.pgbYapilan.Location = new System.Drawing.Point(664, 304);
             this.pgbYapilan.Name = "pgbYapilan";
-            this.pgbYapilan.Size = new System.Drawing.Size(341, 47);
+            this.pgbYapilan.Size = new System.Drawing.Size(294, 47);
             this.pgbYapilan.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.pgbYapilan.TabIndex = 22;
             // 
             // lblHedef
             // 
-            this.lblHedef.Location = new System.Drawing.Point(526, 220);
+            this.lblHedef.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHedef.ForeColor = System.Drawing.Color.Teal;
+            this.lblHedef.Location = new System.Drawing.Point(486, 220);
             this.lblHedef.Name = "lblHedef";
-            this.lblHedef.Size = new System.Drawing.Size(69, 47);
+            this.lblHedef.Size = new System.Drawing.Size(156, 47);
             this.lblHedef.TabIndex = 23;
             this.lblHedef.Text = "HEDEF KALORİ";
             this.lblHedef.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(526, 304);
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label3.Location = new System.Drawing.Point(480, 304);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 47);
+            this.label3.Size = new System.Drawing.Size(178, 47);
             this.label3.TabIndex = 24;
             this.label3.Text = "ALINAN KALORİ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

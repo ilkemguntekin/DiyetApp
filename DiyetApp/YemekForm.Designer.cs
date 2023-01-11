@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YemekForm));
             this.dtZaman = new System.Windows.Forms.DateTimePicker();
             this.rbSabah = new System.Windows.Forms.RadioButton();
             this.rbOgle = new System.Windows.Forms.RadioButton();
@@ -56,6 +59,7 @@
             this.lblMevcutKalori = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvYemekler)).BeginInit();
             this.gbxZaman.SuspendLayout();
             this.gbxKahvalti.SuspendLayout();
@@ -64,10 +68,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvOgle)).BeginInit();
             this.gbxAksam.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAksam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dtZaman
             // 
+            this.dtZaman.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
+            this.dtZaman.CalendarTitleForeColor = System.Drawing.Color.OrangeRed;
             this.dtZaman.Location = new System.Drawing.Point(15, 20);
             this.dtZaman.Name = "dtZaman";
             this.dtZaman.Size = new System.Drawing.Size(219, 23);
@@ -76,10 +83,11 @@
             // rbSabah
             // 
             this.rbSabah.AutoSize = true;
+            this.rbSabah.ForeColor = System.Drawing.Color.Teal;
             this.rbSabah.Location = new System.Drawing.Point(6, 22);
             this.rbSabah.Name = "rbSabah";
             this.rbSabah.Size = new System.Drawing.Size(63, 19);
-            this.rbSabah.TabIndex = 1;
+            this.rbSabah.TabIndex = 0;
             this.rbSabah.TabStop = true;
             this.rbSabah.Text = "SABAH";
             this.rbSabah.UseVisualStyleBackColor = true;
@@ -87,10 +95,11 @@
             // rbOgle
             // 
             this.rbOgle.AutoSize = true;
+            this.rbOgle.ForeColor = System.Drawing.Color.Teal;
             this.rbOgle.Location = new System.Drawing.Point(75, 22);
             this.rbOgle.Name = "rbOgle";
             this.rbOgle.Size = new System.Drawing.Size(63, 19);
-            this.rbOgle.TabIndex = 2;
+            this.rbOgle.TabIndex = 1;
             this.rbOgle.TabStop = true;
             this.rbOgle.Text = "ÖĞLEN";
             this.rbOgle.UseVisualStyleBackColor = true;
@@ -98,10 +107,11 @@
             // rbAksam
             // 
             this.rbAksam.AutoSize = true;
+            this.rbAksam.ForeColor = System.Drawing.Color.Teal;
             this.rbAksam.Location = new System.Drawing.Point(144, 22);
             this.rbAksam.Name = "rbAksam";
             this.rbAksam.Size = new System.Drawing.Size(65, 19);
-            this.rbAksam.TabIndex = 3;
+            this.rbAksam.TabIndex = 2;
             this.rbAksam.TabStop = true;
             this.rbAksam.Text = "AKŞAM";
             this.rbAksam.UseVisualStyleBackColor = true;
@@ -110,17 +120,21 @@
             // 
             this.dgvYemekler.AllowUserToAddRows = false;
             this.dgvYemekler.AllowUserToDeleteRows = false;
-            this.dgvYemekler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvYemekler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvYemekler.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvYemekler.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvYemekler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvYemekler.Location = new System.Drawing.Point(240, 20);
             this.dgvYemekler.MultiSelect = false;
             this.dgvYemekler.Name = "dgvYemekler";
             this.dgvYemekler.ReadOnly = true;
+            this.dgvYemekler.RowHeadersWidth = 51;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.dgvYemekler.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvYemekler.RowTemplate.Height = 25;
             this.dgvYemekler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvYemekler.Size = new System.Drawing.Size(608, 119);
-            this.dgvYemekler.TabIndex = 5;
+            this.dgvYemekler.TabIndex = 3;
             this.dgvYemekler.SelectionChanged += new System.EventHandler(this.dgvYemekler_SelectionChanged);
             // 
             // gbxZaman
@@ -128,10 +142,11 @@
             this.gbxZaman.Controls.Add(this.rbSabah);
             this.gbxZaman.Controls.Add(this.rbOgle);
             this.gbxZaman.Controls.Add(this.rbAksam);
+            this.gbxZaman.ForeColor = System.Drawing.Color.OrangeRed;
             this.gbxZaman.Location = new System.Drawing.Point(15, 49);
             this.gbxZaman.Name = "gbxZaman";
             this.gbxZaman.Size = new System.Drawing.Size(219, 55);
-            this.gbxZaman.TabIndex = 7;
+            this.gbxZaman.TabIndex = 1;
             this.gbxZaman.TabStop = false;
             this.gbxZaman.Text = "Öğün";
             // 
@@ -139,10 +154,12 @@
             // 
             this.gbxKahvalti.Controls.Add(this.label1);
             this.gbxKahvalti.Controls.Add(this.dgvSabah);
+            this.gbxKahvalti.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.gbxKahvalti.ForeColor = System.Drawing.Color.OrangeRed;
             this.gbxKahvalti.Location = new System.Drawing.Point(15, 182);
             this.gbxKahvalti.Name = "gbxKahvalti";
             this.gbxKahvalti.Size = new System.Drawing.Size(316, 168);
-            this.gbxKahvalti.TabIndex = 8;
+            this.gbxKahvalti.TabIndex = 6;
             this.gbxKahvalti.TabStop = false;
             this.gbxKahvalti.Text = "SABAH";
             // 
@@ -158,25 +175,33 @@
             // 
             this.dgvSabah.AllowUserToAddRows = false;
             this.dgvSabah.AllowUserToDeleteRows = false;
+            this.dgvSabah.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvSabah.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvSabah.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvSabah.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSabah.Location = new System.Drawing.Point(6, 22);
             this.dgvSabah.MultiSelect = false;
             this.dgvSabah.Name = "dgvSabah";
             this.dgvSabah.ReadOnly = true;
+            this.dgvSabah.RowHeadersWidth = 51;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.dgvSabah.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSabah.RowTemplate.Height = 25;
             this.dgvSabah.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSabah.Size = new System.Drawing.Size(304, 117);
-            this.dgvSabah.TabIndex = 1;
+            this.dgvSabah.TabIndex = 0;
             this.dgvSabah.SelectionChanged += new System.EventHandler(this.dgvSabah_SelectionChanged);
             // 
             // gbxOglen
             // 
             this.gbxOglen.Controls.Add(this.label2);
             this.gbxOglen.Controls.Add(this.dgvOgle);
+            this.gbxOglen.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.gbxOglen.ForeColor = System.Drawing.Color.Teal;
             this.gbxOglen.Location = new System.Drawing.Point(337, 182);
             this.gbxOglen.Name = "gbxOglen";
             this.gbxOglen.Size = new System.Drawing.Size(316, 168);
-            this.gbxOglen.TabIndex = 9;
+            this.gbxOglen.TabIndex = 7;
             this.gbxOglen.TabStop = false;
             this.gbxOglen.Text = "ÖĞLEN";
             // 
@@ -192,25 +217,32 @@
             // 
             this.dgvOgle.AllowUserToAddRows = false;
             this.dgvOgle.AllowUserToDeleteRows = false;
+            this.dgvOgle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvOgle.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvOgle.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvOgle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOgle.Location = new System.Drawing.Point(6, 22);
             this.dgvOgle.MultiSelect = false;
             this.dgvOgle.Name = "dgvOgle";
             this.dgvOgle.ReadOnly = true;
+            this.dgvOgle.RowHeadersWidth = 51;
+            this.dgvOgle.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvOgle.RowTemplate.Height = 25;
             this.dgvOgle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOgle.Size = new System.Drawing.Size(304, 117);
-            this.dgvOgle.TabIndex = 2;
+            this.dgvOgle.TabIndex = 0;
             this.dgvOgle.SelectionChanged += new System.EventHandler(this.dgvOgle_SelectionChanged);
             // 
             // gbxAksam
             // 
             this.gbxAksam.Controls.Add(this.label3);
             this.gbxAksam.Controls.Add(this.dgvAksam);
+            this.gbxAksam.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.gbxAksam.ForeColor = System.Drawing.Color.OrangeRed;
             this.gbxAksam.Location = new System.Drawing.Point(659, 182);
             this.gbxAksam.Name = "gbxAksam";
             this.gbxAksam.Size = new System.Drawing.Size(316, 168);
-            this.gbxAksam.TabIndex = 10;
+            this.gbxAksam.TabIndex = 8;
             this.gbxAksam.TabStop = false;
             this.gbxAksam.Text = "AKŞAM";
             // 
@@ -226,15 +258,20 @@
             // 
             this.dgvAksam.AllowUserToAddRows = false;
             this.dgvAksam.AllowUserToDeleteRows = false;
+            this.dgvAksam.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvAksam.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvAksam.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvAksam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAksam.Location = new System.Drawing.Point(6, 22);
             this.dgvAksam.MultiSelect = false;
             this.dgvAksam.Name = "dgvAksam";
             this.dgvAksam.ReadOnly = true;
+            this.dgvAksam.RowHeadersWidth = 51;
+            this.dgvAksam.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAksam.RowTemplate.Height = 25;
             this.dgvAksam.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAksam.Size = new System.Drawing.Size(304, 117);
-            this.dgvAksam.TabIndex = 3;
+            this.dgvAksam.TabIndex = 0;
             this.dgvAksam.SelectionChanged += new System.EventHandler(this.dgvAksam_SelectionChanged);
             // 
             // prbKalori
@@ -246,10 +283,10 @@
             // 
             // txtYemek
             // 
-            this.txtYemek.Location = new System.Drawing.Point(11, 114);
+            this.txtYemek.Location = new System.Drawing.Point(15, 110);
             this.txtYemek.Name = "txtYemek";
-            this.txtYemek.Size = new System.Drawing.Size(223, 23);
-            this.txtYemek.TabIndex = 17;
+            this.txtYemek.Size = new System.Drawing.Size(193, 23);
+            this.txtYemek.TabIndex = 2;
             this.txtYemek.TextChanged += new System.EventHandler(this.txtYemek_TextChanged);
             // 
             // cmbPorsiyon
@@ -264,10 +301,12 @@
             this.cmbPorsiyon.Location = new System.Drawing.Point(854, 49);
             this.cmbPorsiyon.Name = "cmbPorsiyon";
             this.cmbPorsiyon.Size = new System.Drawing.Size(121, 23);
-            this.cmbPorsiyon.TabIndex = 19;
+            this.cmbPorsiyon.TabIndex = 4;
             // 
             // label5
             // 
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.Teal;
             this.label5.Location = new System.Drawing.Point(854, 26);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 20);
@@ -276,34 +315,43 @@
             // 
             // btnYemekEkle
             // 
+            this.btnYemekEkle.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnYemekEkle.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnYemekEkle.ForeColor = System.Drawing.Color.White;
             this.btnYemekEkle.Location = new System.Drawing.Point(854, 78);
             this.btnYemekEkle.Name = "btnYemekEkle";
             this.btnYemekEkle.Size = new System.Drawing.Size(121, 61);
-            this.btnYemekEkle.TabIndex = 20;
+            this.btnYemekEkle.TabIndex = 5;
             this.btnYemekEkle.Text = "EKLE";
-            this.btnYemekEkle.UseVisualStyleBackColor = true;
+            this.btnYemekEkle.UseVisualStyleBackColor = false;
             this.btnYemekEkle.Click += new System.EventHandler(this.btnYemekEkle_Click);
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(194, 429);
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label7.Location = new System.Drawing.Point(185, 429);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(30, 23);
+            this.label7.Size = new System.Drawing.Size(50, 23);
             this.label7.TabIndex = 22;
             this.label7.Text = "kcal";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(836, 429);
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.Teal;
+            this.label4.Location = new System.Drawing.Point(835, 429);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 23);
+            this.label4.Size = new System.Drawing.Size(58, 23);
             this.label4.TabIndex = 24;
             this.label4.Text = "kcal";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblHedefKalori
             // 
+            this.lblHedefKalori.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHedefKalori.ForeColor = System.Drawing.Color.Teal;
             this.lblHedefKalori.Location = new System.Drawing.Point(793, 429);
             this.lblHedefKalori.Name = "lblHedefKalori";
             this.lblHedefKalori.Size = new System.Drawing.Size(37, 23);
@@ -313,27 +361,33 @@
             // 
             // btnOgunYemekSil
             // 
+            this.btnOgunYemekSil.BackColor = System.Drawing.Color.Gold;
+            this.btnOgunYemekSil.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnOgunYemekSil.ForeColor = System.Drawing.Color.White;
             this.btnOgunYemekSil.Location = new System.Drawing.Point(435, 356);
             this.btnOgunYemekSil.Name = "btnOgunYemekSil";
             this.btnOgunYemekSil.Size = new System.Drawing.Size(119, 32);
-            this.btnOgunYemekSil.TabIndex = 25;
+            this.btnOgunYemekSil.TabIndex = 9;
             this.btnOgunYemekSil.Text = "YEMEK SİL";
-            this.btnOgunYemekSil.UseVisualStyleBackColor = true;
+            this.btnOgunYemekSil.UseVisualStyleBackColor = false;
             this.btnOgunYemekSil.Click += new System.EventHandler(this.btnOgunYemekSil_Click);
             // 
             // btnGeri
             // 
-            this.btnGeri.Location = new System.Drawing.Point(856, 490);
+            this.btnGeri.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGeri.BackgroundImage")));
+            this.btnGeri.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGeri.Location = new System.Drawing.Point(910, 468);
             this.btnGeri.Name = "btnGeri";
-            this.btnGeri.Size = new System.Drawing.Size(119, 23);
-            this.btnGeri.TabIndex = 26;
-            this.btnGeri.Text = "GERİ";
+            this.btnGeri.Size = new System.Drawing.Size(65, 45);
+            this.btnGeri.TabIndex = 10;
             this.btnGeri.UseVisualStyleBackColor = true;
             this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
             // 
             // lblMevcutKalori
             // 
-            this.lblMevcutKalori.Location = new System.Drawing.Point(151, 429);
+            this.lblMevcutKalori.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblMevcutKalori.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblMevcutKalori.Location = new System.Drawing.Point(143, 429);
             this.lblMevcutKalori.Name = "lblMevcutKalori";
             this.lblMevcutKalori.Size = new System.Drawing.Size(37, 23);
             this.lblMevcutKalori.TabIndex = 21;
@@ -343,28 +397,42 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(121, 400);
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label6.Location = new System.Drawing.Point(108, 400);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(144, 25);
+            this.label6.Size = new System.Drawing.Size(153, 25);
             this.label6.TabIndex = 27;
             this.label6.Text = "ALINAN KALORİ";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.Teal;
             this.label8.Location = new System.Drawing.Point(764, 400);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(133, 25);
+            this.label8.Size = new System.Drawing.Size(140, 25);
             this.label8.TabIndex = 28;
             this.label8.Text = "HEDEF KALORİ";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(207, 112);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 21);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 29;
+            this.pictureBox1.TabStop = false;
             // 
             // YemekForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(992, 525);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnGeri);
@@ -386,7 +454,7 @@
             this.Controls.Add(this.dtZaman);
             this.Name = "YemekForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "YemekForm";
+            this.Text = "Öğün Ekleme/Çıkartma";
             ((System.ComponentModel.ISupportInitialize)(this.dgvYemekler)).EndInit();
             this.gbxZaman.ResumeLayout(false);
             this.gbxZaman.PerformLayout();
@@ -396,6 +464,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvOgle)).EndInit();
             this.gbxAksam.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAksam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -431,5 +500,6 @@
         private Label lblMevcutKalori;
         private Label label6;
         private Label label8;
+        private PictureBox pictureBox1;
     }
 }

@@ -31,9 +31,41 @@ namespace DiyetApp
         private void Guncelle(DiyetDbContext db)
         {
             dgvSabah.DataSource = db.UyeYemekler.Where(x => x.UyeId == _uye.Id && x.OgunId == 1 && x.Zaman.Day == DateTime.Now.Day).ToList();
+            //dgvSabah.DataSource = db.UyeYemekler.Where(x => x.UyeId == _uye.Id && x.OgunId == 1 && x.Zaman.Day == DateTime.Now.Day).Select(x => new UyeYemekTablo { BesinAd = x.Besin.Ad, Id = x.Id, OgunAd = x.Ogun.OgunAd, Zaman = x.Zaman.ToString() }).ToList();
             dgvOgle.DataSource = db.UyeYemekler.Where(x => x.UyeId == _uye.Id && x.OgunId == 2 && x.Zaman.Day == DateTime.Now.Day).ToList();
             dgvAksam.DataSource = db.UyeYemekler.Where(x => x.UyeId == _uye.Id && x.OgunId == 3 && x.Zaman.Day == DateTime.Now.Day).ToList();
             lblHedefKalori.Text = _uye.HedefKalori.ToString();
+
+            foreach (DataGridViewColumn column in dgvSabah.Columns)
+            {
+                column.Visible = false;
+            }
+            dgvSabah.Columns[0].Visible = true;
+            dgvSabah.Columns[1].Visible = true;
+            dgvSabah.Columns[2].Visible = true;
+            dgvSabah.Columns[3].Visible = true;
+
+            foreach (DataGridViewColumn column in dgvOgle.Columns)
+            {
+                column.Visible = false;
+            }
+
+            dgvOgle.Columns[0].Visible = true;
+            dgvOgle.Columns[1].Visible = true;
+            dgvOgle.Columns[2].Visible = true;
+            dgvOgle.Columns[3].Visible = true;
+
+            foreach (DataGridViewColumn column in dgvAksam.Columns)
+            {
+                column.Visible = false;
+            }
+
+            dgvAksam.Columns[0].Visible = true;
+            dgvAksam.Columns[1].Visible = true;
+            dgvAksam.Columns[2].Visible = true;
+            dgvAksam.Columns[3].Visible = true;
+
+            cmbPorsiyon.SelectedIndex = 0;
             rbSabah.Checked = true;
 
             //

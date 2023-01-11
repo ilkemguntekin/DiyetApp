@@ -101,6 +101,7 @@ namespace DiyetApp
 
         private void btnIBilDuzen_Click(object sender, EventArgs e)
         {
+            lblEmail.Visible= false;
             txtEmail.Visible = true;
             txtEmail.Text = _uye.Email;
             txtTelefon.Visible = true;
@@ -115,6 +116,7 @@ namespace DiyetApp
 
             _db.SaveChanges();
 
+            lblEmail.Visible = true;
             txtEmail.Visible = false;
             txtTelefon.Visible = false;
             btnKaydetIB.Visible = false;

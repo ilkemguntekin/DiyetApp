@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GirisForm));
             this.txtGizliYanit = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblTelefon = new System.Windows.Forms.Label();
@@ -47,24 +48,25 @@
             // 
             // txtGizliYanit
             // 
-            this.txtGizliYanit.Location = new System.Drawing.Point(192, 134);
+            this.txtGizliYanit.Location = new System.Drawing.Point(659, 162);
             this.txtGizliYanit.Name = "txtGizliYanit";
-            this.txtGizliYanit.Size = new System.Drawing.Size(224, 29);
-            this.txtGizliYanit.TabIndex = 3;
+            this.txtGizliYanit.Size = new System.Drawing.Size(248, 29);
+            this.txtGizliYanit.TabIndex = 2;
             this.txtGizliYanit.Visible = false;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(192, 8);
+            this.txtEmail.Location = new System.Drawing.Point(659, 36);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(224, 29);
-            this.txtEmail.TabIndex = 1;
+            this.txtEmail.Size = new System.Drawing.Size(248, 29);
+            this.txtEmail.TabIndex = 0;
             this.txtEmail.Visible = false;
             // 
             // lblTelefon
             // 
             this.lblTelefon.AutoSize = true;
-            this.lblTelefon.Location = new System.Drawing.Point(15, 74);
+            this.lblTelefon.BackColor = System.Drawing.Color.Transparent;
+            this.lblTelefon.Location = new System.Drawing.Point(482, 102);
             this.lblTelefon.Name = "lblTelefon";
             this.lblTelefon.Size = new System.Drawing.Size(138, 21);
             this.lblTelefon.TabIndex = 23;
@@ -74,7 +76,8 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(91, 11);
+            this.lblEmail.BackColor = System.Drawing.Color.Transparent;
+            this.lblEmail.Location = new System.Drawing.Point(558, 39);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(57, 21);
             this.lblEmail.TabIndex = 22;
@@ -83,46 +86,50 @@
             // 
             // btnUnuttum
             // 
-            this.btnUnuttum.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnUnuttum.Location = new System.Drawing.Point(169, 319);
+            this.btnUnuttum.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnUnuttum.Location = new System.Drawing.Point(659, 330);
             this.btnUnuttum.Name = "btnUnuttum";
-            this.btnUnuttum.Size = new System.Drawing.Size(82, 53);
-            this.btnUnuttum.TabIndex = 21;
+            this.btnUnuttum.Size = new System.Drawing.Size(249, 24);
+            this.btnUnuttum.TabIndex = 5;
             this.btnUnuttum.Text = "Şifremi Unuttum";
             this.btnUnuttum.UseVisualStyleBackColor = true;
             this.btnUnuttum.Click += new System.EventHandler(this.btnUnuttum_Click);
             // 
             // btnUyeOl
             // 
-            this.btnUyeOl.Location = new System.Drawing.Point(345, 318);
+            this.btnUyeOl.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnUyeOl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnUyeOl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnUyeOl.Location = new System.Drawing.Point(660, 364);
             this.btnUyeOl.Name = "btnUyeOl";
-            this.btnUyeOl.Size = new System.Drawing.Size(82, 53);
-            this.btnUyeOl.TabIndex = 20;
+            this.btnUyeOl.Size = new System.Drawing.Size(246, 43);
+            this.btnUyeOl.TabIndex = 7;
             this.btnUyeOl.Text = "Üye Ol!";
-            this.btnUyeOl.UseVisualStyleBackColor = true;
+            this.btnUyeOl.UseVisualStyleBackColor = false;
             this.btnUyeOl.Click += new System.EventHandler(this.btnUyeOl_Click);
             // 
             // txtSifre
             // 
-            this.txtSifre.Location = new System.Drawing.Point(192, 262);
+            this.txtSifre.Location = new System.Drawing.Point(659, 290);
             this.txtSifre.Name = "txtSifre";
-            this.txtSifre.Size = new System.Drawing.Size(224, 29);
-            this.txtSifre.TabIndex = 5;
+            this.txtSifre.PasswordChar = '*';
+            this.txtSifre.Size = new System.Drawing.Size(248, 29);
+            this.txtSifre.TabIndex = 4;
             // 
             // txtKullaniciAdi
             // 
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(192, 199);
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(659, 227);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
-            this.txtKullaniciAdi.Size = new System.Drawing.Size(224, 29);
-            this.txtKullaniciAdi.TabIndex = 4;
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(248, 29);
+            this.txtKullaniciAdi.TabIndex = 3;
             // 
             // btnAdminGiris
             // 
             this.btnAdminGiris.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAdminGiris.Location = new System.Drawing.Point(468, 12);
+            this.btnAdminGiris.Location = new System.Drawing.Point(12, 12);
             this.btnAdminGiris.Name = "btnAdminGiris";
-            this.btnAdminGiris.Size = new System.Drawing.Size(148, 58);
-            this.btnAdminGiris.TabIndex = 16;
+            this.btnAdminGiris.Size = new System.Drawing.Size(121, 45);
+            this.btnAdminGiris.TabIndex = 9;
             this.btnAdminGiris.Text = "Admin Giriş";
             this.btnAdminGiris.UseVisualStyleBackColor = true;
             this.btnAdminGiris.Click += new System.EventHandler(this.btnAdminGiris_Click);
@@ -130,7 +137,8 @@
             // lblSifre
             // 
             this.lblSifre.AutoSize = true;
-            this.lblSifre.Location = new System.Drawing.Point(103, 265);
+            this.lblSifre.BackColor = System.Drawing.Color.Transparent;
+            this.lblSifre.Location = new System.Drawing.Point(570, 293);
             this.lblSifre.Name = "lblSifre";
             this.lblSifre.Size = new System.Drawing.Size(45, 21);
             this.lblSifre.TabIndex = 15;
@@ -139,7 +147,8 @@
             // lblKullaniciAdi
             // 
             this.lblKullaniciAdi.AutoSize = true;
-            this.lblKullaniciAdi.Location = new System.Drawing.Point(50, 202);
+            this.lblKullaniciAdi.BackColor = System.Drawing.Color.Transparent;
+            this.lblKullaniciAdi.Location = new System.Drawing.Point(517, 230);
             this.lblKullaniciAdi.Name = "lblKullaniciAdi";
             this.lblKullaniciAdi.Size = new System.Drawing.Size(98, 21);
             this.lblKullaniciAdi.TabIndex = 6;
@@ -147,26 +156,30 @@
             // 
             // btnGirisYap
             // 
-            this.btnGirisYap.Location = new System.Drawing.Point(179, 8);
+            this.btnGirisYap.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnGirisYap.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnGirisYap.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnGirisYap.Location = new System.Drawing.Point(658, 413);
             this.btnGirisYap.Name = "btnGirisYap";
-            this.btnGirisYap.Size = new System.Drawing.Size(248, 178);
-            this.btnGirisYap.TabIndex = 13;
+            this.btnGirisYap.Size = new System.Drawing.Size(248, 62);
+            this.btnGirisYap.TabIndex = 8;
             this.btnGirisYap.Text = "Giriş Yap";
-            this.btnGirisYap.UseVisualStyleBackColor = true;
+            this.btnGirisYap.UseVisualStyleBackColor = false;
             this.btnGirisYap.Click += new System.EventHandler(this.btnGirisYap_Click);
             // 
             // txtTelefon
             // 
-            this.txtTelefon.Location = new System.Drawing.Point(192, 71);
+            this.txtTelefon.Location = new System.Drawing.Point(659, 99);
             this.txtTelefon.Name = "txtTelefon";
-            this.txtTelefon.Size = new System.Drawing.Size(224, 29);
-            this.txtTelefon.TabIndex = 2;
+            this.txtTelefon.Size = new System.Drawing.Size(248, 29);
+            this.txtTelefon.TabIndex = 1;
             this.txtTelefon.Visible = false;
             // 
             // lblSorular
             // 
             this.lblSorular.AutoSize = true;
-            this.lblSorular.Location = new System.Drawing.Point(9, 137);
+            this.lblSorular.BackColor = System.Drawing.Color.Transparent;
+            this.lblSorular.Location = new System.Drawing.Point(476, 165);
             this.lblSorular.Name = "lblSorular";
             this.lblSorular.Size = new System.Drawing.Size(140, 21);
             this.lblSorular.TabIndex = 10;
@@ -175,12 +188,15 @@
             // 
             // btnKaydet
             // 
-            this.btnKaydet.Location = new System.Drawing.Point(257, 317);
+            this.btnKaydet.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnKaydet.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnKaydet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnKaydet.Location = new System.Drawing.Point(662, 364);
             this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(82, 53);
+            this.btnKaydet.Size = new System.Drawing.Size(244, 43);
             this.btnKaydet.TabIndex = 28;
             this.btnKaydet.Text = "Kaydet";
-            this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.UseVisualStyleBackColor = false;
             this.btnKaydet.Visible = false;
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
@@ -188,8 +204,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(628, 421);
-            this.Controls.Add(this.btnKaydet);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(932, 502);
             this.Controls.Add(this.txtTelefon);
             this.Controls.Add(this.lblSorular);
             this.Controls.Add(this.txtGizliYanit);
@@ -197,17 +214,18 @@
             this.Controls.Add(this.lblTelefon);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.btnUnuttum);
-            this.Controls.Add(this.btnUyeOl);
             this.Controls.Add(this.txtSifre);
             this.Controls.Add(this.txtKullaniciAdi);
             this.Controls.Add(this.btnAdminGiris);
             this.Controls.Add(this.lblSifre);
             this.Controls.Add(this.lblKullaniciAdi);
             this.Controls.Add(this.btnGirisYap);
+            this.Controls.Add(this.btnUyeOl);
+            this.Controls.Add(this.btnKaydet);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GirisForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kalori Takibe Hoşgeldiniz!";
             this.ResumeLayout(false);
             this.PerformLayout();

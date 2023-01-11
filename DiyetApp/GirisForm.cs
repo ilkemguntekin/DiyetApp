@@ -46,7 +46,37 @@ namespace DiyetApp
                 Sifre = txtSifre.Text
             };
 
-            if(db.Uyeler.Any(x => x.Email == uye.Email))
+            if(txtKullaniciAdi.Text.Trim() == "")
+            {
+                MessageBox.Show("Kullanıcı adı girmek zorunludur.");
+                return;
+            }
+
+            if (txtEmail.Text.Trim() == "")
+            {
+                MessageBox.Show("Email girmek zorunludur.");
+                return;
+            }
+
+            if (txtGizliYanit.Text.Trim() == "")
+            {
+                MessageBox.Show("Gizli yanıt girmek zorunludur.");
+                return;
+            }
+
+            if (txtSifre.Text.Trim() == "")
+            {
+                MessageBox.Show("Şifre girmek zorunludur.");
+                return;
+            }
+
+            if (txtKullaniciAdi.Text.Trim() == "")
+            {
+                MessageBox.Show("Kullanıcı adı girmek zorunludur.");
+                return;
+            }
+
+            if (db.Uyeler.Any(x => x.Email == uye.Email))
             {
                 MessageBox.Show("Bu email daha önce kullanılmıştır. Lütfen yeni bir email adresi giriniz.");
                 return;
@@ -99,7 +129,7 @@ namespace DiyetApp
                         MessageBox.Show("Giriş Yapılmıştır.");
                         basariliGiris = true;
                         uye = kisi;
-                        
+
                         Form frm = new AnaSayfaForm(db, uye);
                         DialogResult dr = frm.ShowDialog();
                         this.Close();
