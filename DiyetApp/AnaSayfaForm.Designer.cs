@@ -89,7 +89,7 @@
             this.lblHedef.ForeColor = System.Drawing.Color.OrangeRed;
             this.lblHedef.Location = new System.Drawing.Point(203, 313);
             this.lblHedef.Name = "lblHedef";
-            this.lblHedef.Size = new System.Drawing.Size(23, 28);
+            this.lblHedef.Size = new System.Drawing.Size(19, 21);
             this.lblHedef.TabIndex = 12;
             this.lblHedef.Text = "0";
             // 
@@ -101,7 +101,7 @@
             this.lblKilo.ForeColor = System.Drawing.Color.White;
             this.lblKilo.Location = new System.Drawing.Point(203, 238);
             this.lblKilo.Name = "lblKilo";
-            this.lblKilo.Size = new System.Drawing.Size(23, 28);
+            this.lblKilo.Size = new System.Drawing.Size(19, 21);
             this.lblKilo.TabIndex = 10;
             this.lblKilo.Text = "0";
             // 
@@ -113,7 +113,7 @@
             this.lblBoy.ForeColor = System.Drawing.Color.White;
             this.lblBoy.Location = new System.Drawing.Point(203, 155);
             this.lblBoy.Name = "lblBoy";
-            this.lblBoy.Size = new System.Drawing.Size(23, 28);
+            this.lblBoy.Size = new System.Drawing.Size(19, 21);
             this.lblBoy.TabIndex = 9;
             this.lblBoy.Text = "0";
             // 
@@ -123,9 +123,9 @@
             this.label4.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(6, 313);
+            this.label4.Location = new System.Drawing.Point(29, 313);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(202, 28);
+            this.label4.Size = new System.Drawing.Size(160, 21);
             this.label4.TabIndex = 3;
             this.label4.Text = "Günlük Hedef Kalori:";
             // 
@@ -137,7 +137,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(147, 238);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 28);
+            this.label2.Size = new System.Drawing.Size(42, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "Kilo:";
             // 
@@ -149,7 +149,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(148, 155);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 28);
+            this.label1.Size = new System.Drawing.Size(42, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Boy:";
             // 
@@ -221,22 +221,24 @@
             this.lblIcecekOneri.AutoSize = true;
             this.lblIcecekOneri.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.lblIcecekOneri.ForeColor = System.Drawing.Color.Teal;
-            this.lblIcecekOneri.Location = new System.Drawing.Point(287, 313);
+            this.lblIcecekOneri.Location = new System.Drawing.Point(302, 318);
             this.lblIcecekOneri.Name = "lblIcecekOneri";
-            this.lblIcecekOneri.Size = new System.Drawing.Size(23, 28);
+            this.lblIcecekOneri.Size = new System.Drawing.Size(19, 21);
             this.lblIcecekOneri.TabIndex = 8;
             this.lblIcecekOneri.Text = "0";
+            this.lblIcecekOneri.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblYemekOneri
             // 
             this.lblYemekOneri.AutoSize = true;
             this.lblYemekOneri.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.lblYemekOneri.ForeColor = System.Drawing.Color.Teal;
-            this.lblYemekOneri.Location = new System.Drawing.Point(287, 155);
+            this.lblYemekOneri.Location = new System.Drawing.Point(302, 162);
             this.lblYemekOneri.Name = "lblYemekOneri";
-            this.lblYemekOneri.Size = new System.Drawing.Size(23, 28);
+            this.lblYemekOneri.Size = new System.Drawing.Size(19, 21);
             this.lblYemekOneri.TabIndex = 6;
             this.lblYemekOneri.Text = "0";
+            this.lblYemekOneri.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblIcecekGun
             // 
@@ -265,6 +267,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(282, 52);
             this.label8.TabIndex = 15;
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
@@ -273,6 +276,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(282, 52);
             this.label7.TabIndex = 15;
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // toolStrip1
             // 
@@ -352,7 +356,7 @@
             // 
             // AnaSayfaForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1033, 559);
             this.Controls.Add(this.toolStrip1);

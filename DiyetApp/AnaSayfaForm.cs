@@ -31,10 +31,10 @@ namespace DiyetApp
             grbKullanici.Text = uye.Ad + " " + uye.Soyad;
 
             // Sağ groupBox
-            List<BesinPorsiyon> BPorsiyons = db.BesinPorsiyonlar.ToList();
+            List<BesinPorsiyon> Yemekler = db.BesinPorsiyonlar.Where(x => x.KategoriId != 2).ToList();
             List<int> yemekIds = new List<int>();
             Random rnd = new Random();
-            foreach(BesinPorsiyon besin in BPorsiyons)
+            foreach(BesinPorsiyon besin in Yemekler)
             {
                 yemekIds.Add(besin.Id);
             }
@@ -42,6 +42,15 @@ namespace DiyetApp
             int yemekId = yemekIds[rnd.Next(0, yemekIds.Count - 1)];
             lblYemekOneri.Text = db.BesinPorsiyonlar.First(x => x.Id == yemekId).Ad;
 
+            rnd = new Random();
+            List<BesinPorsiyon> Icecekler = db.BesinPorsiyonlar.Where(x => x.KategoriId == 2).ToList();
+            List<int> icecekIds = new List<int>();
+            foreach (BesinPorsiyon icecek in Icecekler)
+            {
+                icecekIds.Add(icecek.Id);
+            }
+            int icecekId = icecekIds[rnd.Next(0, icecekIds.Count - 1)];
+            lblIcecekOneri.Text = db.BesinPorsiyonlar.First(x => x.Id == icecekId).Ad;
         }
 
         private void btnEv_Click(object sender, EventArgs e)
