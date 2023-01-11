@@ -96,9 +96,9 @@ namespace DiyetApp
                 column.Visible = false;
             }
 
-            dgvYemekler.Columns["Ad"].Visible = false;
-            dgvYemekler.Columns["Kalori"].Visible = false;
-            dgvYemekler.Columns["KategoriId"].Visible = false;
+            dgvYemekler.Columns["Ad"].Visible = true;
+            dgvYemekler.Columns["Kalori"].Visible = true;
+            dgvYemekler.Columns["KategoriId"].Visible = true;
         }
 
         private void dtZaman_ValueChanged(object sender, EventArgs e)

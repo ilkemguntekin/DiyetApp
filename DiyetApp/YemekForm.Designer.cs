@@ -75,6 +75,7 @@
             // 
             this.dtZaman.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
             this.dtZaman.CalendarTitleForeColor = System.Drawing.Color.OrangeRed;
+            this.dtZaman.Enabled = false;
             this.dtZaman.Location = new System.Drawing.Point(15, 20);
             this.dtZaman.Name = "dtZaman";
             this.dtZaman.Size = new System.Drawing.Size(219, 23);
@@ -175,7 +176,7 @@
             // 
             this.dgvSabah.AllowUserToAddRows = false;
             this.dgvSabah.AllowUserToDeleteRows = false;
-            this.dgvSabah.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvSabah.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSabah.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvSabah.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvSabah.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -217,7 +218,7 @@
             // 
             this.dgvOgle.AllowUserToAddRows = false;
             this.dgvOgle.AllowUserToDeleteRows = false;
-            this.dgvOgle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvOgle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvOgle.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvOgle.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvOgle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -258,7 +259,7 @@
             // 
             this.dgvAksam.AllowUserToAddRows = false;
             this.dgvAksam.AllowUserToDeleteRows = false;
-            this.dgvAksam.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvAksam.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAksam.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvAksam.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvAksam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

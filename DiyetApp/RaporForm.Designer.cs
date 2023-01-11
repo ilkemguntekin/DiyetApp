@@ -82,7 +82,7 @@
             // 
             this.dgvYemekler.AllowUserToAddRows = false;
             this.dgvYemekler.AllowUserToDeleteRows = false;
-            this.dgvYemekler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvYemekler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvYemekler.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvYemekler.BackgroundColor = System.Drawing.Color.White;
             this.dgvYemekler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -108,7 +108,7 @@
             // 
             // pgbHedef
             // 
-            this.pgbHedef.ForeColor = System.Drawing.Color.Turquoise;
+            this.pgbHedef.ForeColor = System.Drawing.Color.Lime;
             this.pgbHedef.Location = new System.Drawing.Point(664, 220);
             this.pgbHedef.Name = "pgbHedef";
             this.pgbHedef.Size = new System.Drawing.Size(294, 47);
@@ -139,6 +139,7 @@
             // 
             // pgbYapilan
             // 
+            this.pgbYapilan.ForeColor = System.Drawing.SystemColors.Desktop;
             this.pgbYapilan.Location = new System.Drawing.Point(664, 304);
             this.pgbYapilan.Name = "pgbYapilan";
             this.pgbYapilan.Size = new System.Drawing.Size(294, 47);

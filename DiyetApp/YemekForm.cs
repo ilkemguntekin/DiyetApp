@@ -25,6 +25,8 @@ namespace DiyetApp
             InitializeComponent();
 
             dgvYemekler.DataSource = db.BesinPorsiyonlar.ToList();
+            dgvYemekler.Columns[5].Visible = false;
+
             Guncelle(db);
         }
 
@@ -72,7 +74,7 @@ namespace DiyetApp
             double mevcutKalori = 0;
             List<int> idListe = new List<int>();
             idListe = _db.UyeYemekler.Where(x => x.Zaman.Day == DateTime.Now.Day && x.UyeId == _uye.Id).Select(x => x.BesinId).ToList();
-            foreach(int id in idListe)
+            foreach (int id in idListe)
             {
                 mevcutKalori = mevcutKalori + _db.BesinPorsiyonlar.First(x => x.Id == id).Kalori;
             }
@@ -80,12 +82,36 @@ namespace DiyetApp
 
             prbKalori.Minimum = 0;
             prbKalori.Maximum = (int)_uye.HedefKalori;
-            if(mevcutKalori > _uye.HedefKalori)
+            if (mevcutKalori > _uye.HedefKalori)
             {
                 prbKalori.Value = (int)_uye.HedefKalori;
             }
             else
                 prbKalori.Value = (int)mevcutKalori;
+
+            SatirSec();
+        }
+
+        private void SatirSec()
+        {
+            bool IsRowSelected = false;
+            foreach (Control control in this.Controls)
+            {
+                if (control is DataGridView)
+                {
+                    DataGridView dgv = (DataGridView)control;
+                    if (dgv.SelectedRows.Count > 0)
+                    {
+                        IsRowSelected = true;
+                        break;
+                    }
+                }
+            }
+
+            if (IsRowSelected == false)
+            {
+                dgvYemekler.Rows[0].Selected = true;
+            }
         }
 
         private void txtYemek_TextChanged(object sender, EventArgs e)
@@ -94,7 +120,16 @@ namespace DiyetApp
         }
 
         private void btnYemekEkle_Click(object sender, EventArgs e)
-        {           
+        {
+            if (dgvYemekler.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Lütfen Yemek Seçiniz");
+                return;
+            }
+
+            BesinPorsiyon Besin = (BesinPorsiyon)dgvYemekler.SelectedRows[0].DataBoundItem;
+
+
             int deger = Convert.ToInt32(cmbPorsiyon.SelectedItem);
 
             if (rbSabah.Checked)
@@ -103,7 +138,6 @@ namespace DiyetApp
                 {
                     UyeYemek uyeYemek = new UyeYemek();
                     uyeYemek.Zaman = dtZaman.Value;
-                    BesinPorsiyon Besin = (BesinPorsiyon)dgvYemekler.SelectedRows[0].DataBoundItem;
                     uyeYemek.BesinId = Besin.Id;
                     uyeYemek.UyeId = _uye.Id;
                     uyeYemek.OgunId = 1;
@@ -119,7 +153,6 @@ namespace DiyetApp
                 {
                     UyeYemek uyeYemek = new UyeYemek();
                     uyeYemek.Zaman = dtZaman.Value;
-                    BesinPorsiyon Besin = (BesinPorsiyon)dgvYemekler.SelectedRows[0].DataBoundItem;
                     uyeYemek.BesinId = Besin.Id;
                     uyeYemek.UyeId = _uye.Id;
                     uyeYemek.OgunId = 2;
@@ -135,7 +168,6 @@ namespace DiyetApp
                 {
                     UyeYemek uyeYemek = new UyeYemek();
                     uyeYemek.Zaman = dtZaman.Value;
-                    BesinPorsiyon Besin = (BesinPorsiyon)dgvYemekler.SelectedRows[0].DataBoundItem;
                     uyeYemek.BesinId = Besin.Id;
                     uyeYemek.UyeId = _uye.Id;
                     uyeYemek.OgunId = 3;
@@ -151,7 +183,7 @@ namespace DiyetApp
         {
             foreach (DataGridViewRow row in dgvAksam.Rows)
             {
-                row.Selected = row.DataBoundItem == null;
+                row.Selected = row.DataBoundItem == null;             
             }
             foreach (DataGridViewRow row in dgvOgle.Rows)
             {
@@ -215,10 +247,17 @@ namespace DiyetApp
         {
             if (dgvYemekler.SelectedCells.Count != 0)
             {
+                MessageBox.Show("Silinecek yemeği öğününüzden seçiniz.");
                 return;
             }
-            
-            if(dgvSabah.SelectedCells.Count != 0)
+
+            if (dgvSabah.SelectedCells.Count == 0 && dgvOgle.SelectedCells.Count == 0 && dgvAksam.SelectedCells.Count == 0)
+            {
+                MessageBox.Show("Silinecek yemeği öğününüzden seçiniz.");
+                return;
+            }
+
+            if (dgvSabah.SelectedCells.Count != 0)
             {
                 _db.UyeYemekler.Remove((UyeYemek)dgvSabah.SelectedRows[0].DataBoundItem);
                 _db.SaveChanges();
@@ -232,14 +271,11 @@ namespace DiyetApp
 
             if (dgvAksam.SelectedCells.Count != 0)
             {
-                DataGridViewRow row = new DataGridViewRow();
-                row.Selected = row.DataBoundItem == dgvAksam.SelectedRows[0];
                 _db.UyeYemekler.Remove((UyeYemek)dgvAksam.SelectedRows[0].DataBoundItem);
                 _db.SaveChanges();
             }
 
             Guncelle(_db);
-
         }
 
         private void btnGeri_Click(object sender, EventArgs e)
