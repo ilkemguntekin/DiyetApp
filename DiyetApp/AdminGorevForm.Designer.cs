@@ -43,8 +43,7 @@
             this.btnBEkle = new System.Windows.Forms.Button();
             this.dgvBesinler = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnCikis = new System.Windows.Forms.Button();
-            this.btnAdminCikis = new System.Windows.Forms.Button();
+            this.btnCik = new System.Windows.Forms.Button();
             this.lblIdK = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnKategoriKaydet = new System.Windows.Forms.Button();
@@ -54,7 +53,6 @@
             this.btnKDuzenle = new System.Windows.Forms.Button();
             this.btnKEkle = new System.Windows.Forms.Button();
             this.dgvKategoriler = new System.Windows.Forms.DataGridView();
-            this.btnCik = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBesinler)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -231,8 +229,6 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.btnCik);
-            this.groupBox2.Controls.Add(this.btnCikis);
-            this.groupBox2.Controls.Add(this.btnAdminCikis);
             this.groupBox2.Controls.Add(this.lblIdK);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.btnKategoriKaydet);
@@ -251,19 +247,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Kategorileri Düzenle";
             // 
-            // btnCikis
+            // btnCik
             // 
-            this.btnCikis.Location = new System.Drawing.Point(0, 0);
-            this.btnCikis.Name = "btnCikis";
-            this.btnCikis.Size = new System.Drawing.Size(75, 23);
-            this.btnCikis.TabIndex = 0;
-            // 
-            // btnAdminCikis
-            // 
-            this.btnAdminCikis.Location = new System.Drawing.Point(0, 0);
-            this.btnAdminCikis.Name = "btnAdminCikis";
-            this.btnAdminCikis.Size = new System.Drawing.Size(75, 23);
-            this.btnAdminCikis.TabIndex = 1;
+            this.btnCik.ForeColor = System.Drawing.Color.Red;
+            this.btnCik.Location = new System.Drawing.Point(407, 564);
+            this.btnCik.Name = "btnCik";
+            this.btnCik.Size = new System.Drawing.Size(97, 36);
+            this.btnCik.TabIndex = 14;
+            this.btnCik.Text = "ÇIKIŞ";
+            this.btnCik.UseVisualStyleBackColor = true;
+            this.btnCik.Click += new System.EventHandler(this.btnCik_Click);
             // 
             // lblIdK
             // 
@@ -368,17 +361,6 @@
             this.dgvKategoriler.Size = new System.Drawing.Size(498, 178);
             this.dgvKategoriler.TabIndex = 0;
             // 
-            // btnCik
-            // 
-            this.btnCik.ForeColor = System.Drawing.Color.Red;
-            this.btnCik.Location = new System.Drawing.Point(407, 564);
-            this.btnCik.Name = "btnCik";
-            this.btnCik.Size = new System.Drawing.Size(97, 36);
-            this.btnCik.TabIndex = 14;
-            this.btnCik.Text = "ÇIKIŞ";
-            this.btnCik.UseVisualStyleBackColor = true;
-            this.btnCik.Click += new System.EventHandler(this.btnCik_Click);
-            // 
             // AdminGorevForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -427,8 +409,6 @@
         private Label label4;
         private Label lblIdK;
         private Label label1;
-        private Button btnAdminCikis;
-        private Button btnCikis;
         private Button btnCik;
     }
 }
