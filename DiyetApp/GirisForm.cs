@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.AxHost;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DiyetApp
 {
@@ -20,6 +22,8 @@ namespace DiyetApp
         public GirisForm()
         {
             InitializeComponent();
+
+            cmbGizliYanit.SelectedIndex = 0;
         }
 
         private void btnUyeOl_Click(object sender, EventArgs e)
@@ -27,7 +31,7 @@ namespace DiyetApp
             btnKaydet.Visible = true;
             lblEmail.Visible = true;
             lblTelefon.Visible = true;
-            lblSorular.Visible = true;
+            cmbGizliYanit.Visible = true;
             txtEmail.Visible = true;
             txtTelefon.Visible = true;
             txtGizliYanit.Visible = true;
@@ -107,7 +111,7 @@ namespace DiyetApp
             btnKaydet.Visible = false;
             lblEmail.Visible = false;
             lblTelefon.Visible = false;
-            lblSorular.Visible = false;
+            cmbGizliYanit.Visible = false;
             txtEmail.Visible = false;
             txtTelefon.Visible = false;
             txtGizliYanit.Visible = false;

@@ -22,7 +22,7 @@ namespace DiyetApp.Contexts
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=MONSTER\\MSSQLSERVER2022; database=DiyetAppDb; Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer("server=.; database=DiyetAppDb; Trusted_Connection=True;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

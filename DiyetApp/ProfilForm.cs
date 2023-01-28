@@ -107,6 +107,7 @@ namespace DiyetApp
             txtTelefon.Visible = true;
             txtTelefon.Text = _uye.Telefon;
             btnKaydetIB.Visible = true;
+            lblTelefon.Visible = false;
         }
 
         private void btnKaydetIB_Click(object sender, EventArgs e)
@@ -117,6 +118,7 @@ namespace DiyetApp
             _db.SaveChanges();
 
             lblEmail.Visible = true;
+            lblTelefon.Visible = true;
             txtEmail.Visible = false;
             txtTelefon.Visible = false;
             btnKaydetIB.Visible = false;

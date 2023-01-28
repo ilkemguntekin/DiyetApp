@@ -43,6 +43,8 @@
             this.btnBEkle = new System.Windows.Forms.Button();
             this.dgvBesinler = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnCikis = new System.Windows.Forms.Button();
+            this.btnAdminCikis = new System.Windows.Forms.Button();
             this.lblIdK = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnKategoriKaydet = new System.Windows.Forms.Button();
@@ -52,6 +54,7 @@
             this.btnKDuzenle = new System.Windows.Forms.Button();
             this.btnKEkle = new System.Windows.Forms.Button();
             this.dgvKategoriler = new System.Windows.Forms.DataGridView();
+            this.btnCik = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBesinler)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -89,7 +92,7 @@
             this.lblBId.AutoSize = true;
             this.lblBId.Location = new System.Drawing.Point(180, 310);
             this.lblBId.Name = "lblBId";
-            this.lblBId.Size = new System.Drawing.Size(23, 28);
+            this.lblBId.Size = new System.Drawing.Size(19, 21);
             this.lblBId.TabIndex = 15;
             this.lblBId.Text = "0";
             this.lblBId.Visible = false;
@@ -99,7 +102,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(123, 310);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 28);
+            this.label4.Size = new System.Drawing.Size(30, 21);
             this.label4.TabIndex = 14;
             this.label4.Text = "ID:";
             this.label4.Visible = false;
@@ -119,7 +122,7 @@
             // 
             this.txtKategoriId.Location = new System.Drawing.Point(180, 455);
             this.txtKategoriId.Name = "txtKategoriId";
-            this.txtKategoriId.Size = new System.Drawing.Size(174, 34);
+            this.txtKategoriId.Size = new System.Drawing.Size(174, 29);
             this.txtKategoriId.TabIndex = 7;
             this.txtKategoriId.Visible = false;
             // 
@@ -127,7 +130,7 @@
             // 
             this.txtKalori.Location = new System.Drawing.Point(180, 403);
             this.txtKalori.Name = "txtKalori";
-            this.txtKalori.Size = new System.Drawing.Size(174, 34);
+            this.txtKalori.Size = new System.Drawing.Size(174, 29);
             this.txtKalori.TabIndex = 6;
             this.txtKalori.Visible = false;
             // 
@@ -135,16 +138,16 @@
             // 
             this.txtBesinAd.Location = new System.Drawing.Point(180, 347);
             this.txtBesinAd.Name = "txtBesinAd";
-            this.txtBesinAd.Size = new System.Drawing.Size(174, 34);
+            this.txtBesinAd.Size = new System.Drawing.Size(174, 29);
             this.txtBesinAd.TabIndex = 5;
             this.txtBesinAd.Visible = false;
             // 
             // lblKId
             // 
             this.lblKId.AutoSize = true;
-            this.lblKId.Location = new System.Drawing.Point(43, 458);
+            this.lblKId.Location = new System.Drawing.Point(57, 458);
             this.lblKId.Name = "lblKId";
-            this.lblKId.Size = new System.Drawing.Size(117, 28);
+            this.lblKId.Size = new System.Drawing.Size(96, 21);
             this.lblKId.TabIndex = 7;
             this.lblKId.Text = "Kategori Id:";
             this.lblKId.Visible = false;
@@ -152,9 +155,9 @@
             // lblKalori
             // 
             this.lblKalori.AutoSize = true;
-            this.lblKalori.Location = new System.Drawing.Point(92, 406);
+            this.lblKalori.Location = new System.Drawing.Point(97, 406);
             this.lblKalori.Name = "lblKalori";
-            this.lblKalori.Size = new System.Drawing.Size(68, 28);
+            this.lblKalori.Size = new System.Drawing.Size(56, 21);
             this.lblKalori.TabIndex = 6;
             this.lblKalori.Text = "Kalori:";
             this.lblKalori.Visible = false;
@@ -162,9 +165,9 @@
             // lblBAd
             // 
             this.lblBAd.AutoSize = true;
-            this.lblBAd.Location = new System.Drawing.Point(58, 350);
+            this.lblBAd.Location = new System.Drawing.Point(71, 350);
             this.lblBAd.Name = "lblBAd";
-            this.lblBAd.Size = new System.Drawing.Size(102, 28);
+            this.lblBAd.Size = new System.Drawing.Size(82, 21);
             this.lblBAd.TabIndex = 4;
             this.lblBAd.Text = "Besin Adı:";
             this.lblBAd.Visible = false;
@@ -227,6 +230,9 @@
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.btnCik);
+            this.groupBox2.Controls.Add(this.btnCikis);
+            this.groupBox2.Controls.Add(this.btnAdminCikis);
             this.groupBox2.Controls.Add(this.lblIdK);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.btnKategoriKaydet);
@@ -245,12 +251,26 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Kategorileri Düzenle";
             // 
+            // btnCikis
+            // 
+            this.btnCikis.Location = new System.Drawing.Point(0, 0);
+            this.btnCikis.Name = "btnCikis";
+            this.btnCikis.Size = new System.Drawing.Size(75, 23);
+            this.btnCikis.TabIndex = 0;
+            // 
+            // btnAdminCikis
+            // 
+            this.btnAdminCikis.Location = new System.Drawing.Point(0, 0);
+            this.btnAdminCikis.Name = "btnAdminCikis";
+            this.btnAdminCikis.Size = new System.Drawing.Size(75, 23);
+            this.btnAdminCikis.TabIndex = 1;
+            // 
             // lblIdK
             // 
             this.lblIdK.AutoSize = true;
             this.lblIdK.Location = new System.Drawing.Point(180, 350);
             this.lblIdK.Name = "lblIdK";
-            this.lblIdK.Size = new System.Drawing.Size(23, 28);
+            this.lblIdK.Size = new System.Drawing.Size(19, 21);
             this.lblIdK.TabIndex = 13;
             this.lblIdK.Text = "0";
             this.lblIdK.Visible = false;
@@ -260,7 +280,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(126, 350);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 28);
+            this.label1.Size = new System.Drawing.Size(30, 21);
             this.label1.TabIndex = 12;
             this.label1.Text = "ID:";
             this.label1.Visible = false;
@@ -280,16 +300,16 @@
             // 
             this.txtKategoriAdi.Location = new System.Drawing.Point(180, 395);
             this.txtKategoriAdi.Name = "txtKategoriAdi";
-            this.txtKategoriAdi.Size = new System.Drawing.Size(174, 34);
+            this.txtKategoriAdi.Size = new System.Drawing.Size(174, 29);
             this.txtKategoriAdi.TabIndex = 4;
             this.txtKategoriAdi.Visible = false;
             // 
             // lblKAd
             // 
             this.lblKAd.AutoSize = true;
-            this.lblKAd.Location = new System.Drawing.Point(34, 398);
+            this.lblKAd.Location = new System.Drawing.Point(50, 398);
             this.lblKAd.Name = "lblKAd";
-            this.lblKAd.Size = new System.Drawing.Size(129, 28);
+            this.lblKAd.Size = new System.Drawing.Size(106, 21);
             this.lblKAd.TabIndex = 9;
             this.lblKAd.Text = "Kategori Adı:";
             this.lblKAd.Visible = false;
@@ -348,9 +368,20 @@
             this.dgvKategoriler.Size = new System.Drawing.Size(498, 178);
             this.dgvKategoriler.TabIndex = 0;
             // 
+            // btnCik
+            // 
+            this.btnCik.ForeColor = System.Drawing.Color.Red;
+            this.btnCik.Location = new System.Drawing.Point(407, 564);
+            this.btnCik.Name = "btnCik";
+            this.btnCik.Size = new System.Drawing.Size(97, 36);
+            this.btnCik.TabIndex = 14;
+            this.btnCik.Text = "ÇIKIŞ";
+            this.btnCik.UseVisualStyleBackColor = true;
+            this.btnCik.Click += new System.EventHandler(this.btnCik_Click);
+            // 
             // AdminGorevForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1073, 630);
             this.Controls.Add(this.groupBox2);
@@ -396,5 +427,8 @@
         private Label label4;
         private Label lblIdK;
         private Label label1;
+        private Button btnAdminCikis;
+        private Button btnCikis;
+        private Button btnCik;
     }
 }

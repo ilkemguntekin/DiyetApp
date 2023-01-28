@@ -42,8 +42,8 @@
             this.lblKullaniciAdi = new System.Windows.Forms.Label();
             this.btnGirisYap = new System.Windows.Forms.Button();
             this.txtTelefon = new System.Windows.Forms.TextBox();
-            this.lblSorular = new System.Windows.Forms.Label();
             this.btnKaydet = new System.Windows.Forms.Button();
+            this.cmbGizliYanit = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtGizliYanit
@@ -175,17 +175,6 @@
             this.txtTelefon.TabIndex = 1;
             this.txtTelefon.Visible = false;
             // 
-            // lblSorular
-            // 
-            this.lblSorular.AutoSize = true;
-            this.lblSorular.BackColor = System.Drawing.Color.Transparent;
-            this.lblSorular.Location = new System.Drawing.Point(476, 165);
-            this.lblSorular.Name = "lblSorular";
-            this.lblSorular.Size = new System.Drawing.Size(140, 21);
-            this.lblSorular.TabIndex = 10;
-            this.lblSorular.Text = "Anne Kızlık Soyadı:";
-            this.lblSorular.Visible = false;
-            // 
             // btnKaydet
             // 
             this.btnKaydet.BackColor = System.Drawing.Color.DarkSeaGreen;
@@ -200,6 +189,22 @@
             this.btnKaydet.Visible = false;
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
+            // cmbGizliYanit
+            // 
+            this.cmbGizliYanit.Items.AddRange(new object[] {
+            "Gizli Yanıt...",
+            "Doğduğun il:",
+            "En sevdiğin renk:",
+            "İlk arabanın markası:",
+            "İlk evcil hayanın adı:",
+            "Tuttuğun takım:"});
+            this.cmbGizliYanit.Location = new System.Drawing.Point(457, 162);
+            this.cmbGizliYanit.Name = "cmbGizliYanit";
+            this.cmbGizliYanit.Size = new System.Drawing.Size(158, 29);
+            this.cmbGizliYanit.TabIndex = 29;
+            this.cmbGizliYanit.Text = "Gizli Yanıt...";
+            this.cmbGizliYanit.Visible = false;
+            // 
             // GirisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -207,8 +212,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(932, 502);
+            this.Controls.Add(this.cmbGizliYanit);
             this.Controls.Add(this.txtTelefon);
-            this.Controls.Add(this.lblSorular);
             this.Controls.Add(this.txtGizliYanit);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblTelefon);
@@ -247,7 +252,7 @@
         private Label lblKullaniciAdi;
         private Button btnGirisYap;
         private TextBox txtTelefon;
-        private Label lblSorular;
         private Button btnKaydet;
+        private ComboBox cmbGizliYanit;
     }
 }

@@ -53,7 +53,7 @@
             this.label1.Location = new System.Drawing.Point(13, 10);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 32);
+            this.label1.Size = new System.Drawing.Size(259, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bugün Ne Yedim?";
             // 
@@ -62,9 +62,9 @@
             this.btnGeri.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnGeri.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGeri.BackgroundImage")));
             this.btnGeri.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGeri.Location = new System.Drawing.Point(869, 479);
+            this.btnGeri.Location = new System.Drawing.Point(874, 479);
             this.btnGeri.Name = "btnGeri";
-            this.btnGeri.Size = new System.Drawing.Size(89, 78);
+            this.btnGeri.Size = new System.Drawing.Size(84, 78);
             this.btnGeri.TabIndex = 2;
             this.btnGeri.UseVisualStyleBackColor = false;
             this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
@@ -74,7 +74,7 @@
             this.dtZaman.CalendarTitleBackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtZaman.Location = new System.Drawing.Point(279, 15);
             this.dtZaman.Name = "dtZaman";
-            this.dtZaman.Size = new System.Drawing.Size(219, 29);
+            this.dtZaman.Size = new System.Drawing.Size(219, 34);
             this.dtZaman.TabIndex = 0;
             this.dtZaman.ValueChanged += new System.EventHandler(this.dtZaman_ValueChanged);
             // 
@@ -119,6 +119,7 @@
             this.groupBox1.Controls.Add(this.lstbYemekler);
             this.groupBox1.Controls.Add(this.dgvYemekler);
             this.groupBox1.Controls.Add(this.lblRapor);
+            this.groupBox1.ForeColor = System.Drawing.Color.Teal;
             this.groupBox1.Location = new System.Drawing.Point(20, 75);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(460, 482);
@@ -130,10 +131,10 @@
             // 
             this.lstbYemekler.DisplayMember = "Ad";
             this.lstbYemekler.FormattingEnabled = true;
-            this.lstbYemekler.ItemHeight = 21;
+            this.lstbYemekler.ItemHeight = 28;
             this.lstbYemekler.Location = new System.Drawing.Point(6, 82);
             this.lstbYemekler.Name = "lstbYemekler";
-            this.lstbYemekler.Size = new System.Drawing.Size(140, 298);
+            this.lstbYemekler.Size = new System.Drawing.Size(140, 284);
             this.lstbYemekler.TabIndex = 1;
             this.lstbYemekler.SelectedIndexChanged += new System.EventHandler(this.lstbYemekler_SelectedIndexChanged);
             // 
@@ -170,7 +171,7 @@
             // 
             // RaporForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(976, 569);

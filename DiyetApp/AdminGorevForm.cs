@@ -59,6 +59,11 @@ namespace DiyetApp
                 txtKategoriId.Visible = false;
                 btnBesinKaydet.Visible = false;
 
+
+                txtBesinAd.Text = "";
+                txtKalori.Text = "";
+                txtKategoriAdi.Text = "";
+
                 Guncelle();
             }
             else
@@ -78,6 +83,11 @@ namespace DiyetApp
                 txtKalori.Visible = false;
                 txtKategoriId.Visible = false;
                 btnBesinKaydet.Visible = false;
+
+
+                txtBesinAd.Text = "";
+                txtKalori.Text = "";
+                txtKategoriAdi.Text = "";
 
                 Guncelle();
             }
@@ -133,6 +143,8 @@ namespace DiyetApp
                 btnKategoriKaydet.Visible = false;
                 txtKategoriAdi.Visible = false;
 
+                txtKategoriAdi.Text = "";
+
                 Guncelle();
             }
             else
@@ -146,6 +158,8 @@ namespace DiyetApp
                 lblKAd.Visible = false;
                 btnKategoriKaydet.Visible = false;
                 txtKategoriAdi.Visible = false;
+
+                txtKategoriAdi.Text = "";
 
                 Guncelle();
             }
@@ -171,6 +185,13 @@ namespace DiyetApp
             _db.SaveChanges();
 
             Guncelle();
+        }
+
+        private void btnCik_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            var frm = new GirisForm();
+            DialogResult dr = frm.ShowDialog();
         }
     }
 }
