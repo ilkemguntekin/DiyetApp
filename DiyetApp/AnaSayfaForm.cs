@@ -62,6 +62,7 @@ namespace DiyetApp
 
         private void btnYemek_Click(object sender, EventArgs e)
         {
+            this.Hide();
             this.Close();
             var frm = new YemekForm(_db, _uye);
             DialogResult dr = frm.ShowDialog();
@@ -69,6 +70,7 @@ namespace DiyetApp
 
         private void btnRapor_Click(object sender, EventArgs e)
         {
+            this.Hide();
             this.Close();
             var frm = new RaporForm(_db, _uye);
             DialogResult dr = frm.ShowDialog();
@@ -76,6 +78,7 @@ namespace DiyetApp
 
         private void btnProfil_Click(object sender, EventArgs e)
         {
+            this.Hide();
             this.Close();
             var frm = new ProfilForm(_db, _uye);
             DialogResult dr = frm.ShowDialog();
@@ -83,6 +86,7 @@ namespace DiyetApp
 
         private void btnCikis_Click(object sender, EventArgs e)
         {
+            this.Hide();
             this.Close();
             var frm = new GirisForm();
             DialogResult dr = frm.ShowDialog();

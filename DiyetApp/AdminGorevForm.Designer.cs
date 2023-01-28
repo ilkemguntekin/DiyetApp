@@ -43,8 +43,12 @@
             this.btnBEkle = new System.Windows.Forms.Button();
             this.dgvBesinler = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+<<<<<<< HEAD
             this.btnCikis = new System.Windows.Forms.Button();
             this.btnAdminCikis = new System.Windows.Forms.Button();
+=======
+            this.btnCik = new System.Windows.Forms.Button();
+>>>>>>> fba694f14585fe54c45248487a50e48b20d3de1c
             this.lblIdK = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnKategoriKaydet = new System.Windows.Forms.Button();
@@ -231,8 +235,11 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.btnCik);
+<<<<<<< HEAD
             this.groupBox2.Controls.Add(this.btnCikis);
             this.groupBox2.Controls.Add(this.btnAdminCikis);
+=======
+>>>>>>> fba694f14585fe54c45248487a50e48b20d3de1c
             this.groupBox2.Controls.Add(this.lblIdK);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.btnKategoriKaydet);
@@ -251,6 +258,7 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Kategorileri Düzenle";
             // 
+<<<<<<< HEAD
             // btnCikis
             // 
             this.btnCikis.Location = new System.Drawing.Point(0, 0);
@@ -264,6 +272,18 @@
             this.btnAdminCikis.Name = "btnAdminCikis";
             this.btnAdminCikis.Size = new System.Drawing.Size(75, 23);
             this.btnAdminCikis.TabIndex = 1;
+=======
+            // btnCik
+            // 
+            this.btnCik.ForeColor = System.Drawing.Color.Red;
+            this.btnCik.Location = new System.Drawing.Point(407, 564);
+            this.btnCik.Name = "btnCik";
+            this.btnCik.Size = new System.Drawing.Size(97, 36);
+            this.btnCik.TabIndex = 14;
+            this.btnCik.Text = "ÇIKIŞ";
+            this.btnCik.UseVisualStyleBackColor = true;
+            this.btnCik.Click += new System.EventHandler(this.btnCik_Click);
+>>>>>>> fba694f14585fe54c45248487a50e48b20d3de1c
             // 
             // lblIdK
             // 
@@ -427,8 +447,11 @@
         private Label label4;
         private Label lblIdK;
         private Label label1;
+<<<<<<< HEAD
         private Button btnAdminCikis;
         private Button btnCikis;
+=======
+>>>>>>> fba694f14585fe54c45248487a50e48b20d3de1c
         private Button btnCik;
     }
 }

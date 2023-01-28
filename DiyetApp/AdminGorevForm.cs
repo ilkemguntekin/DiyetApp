@@ -189,6 +189,10 @@ namespace DiyetApp
 
         private void btnCik_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+=======
+            this.Hide();
+>>>>>>> fba694f14585fe54c45248487a50e48b20d3de1c
             this.Close();
             var frm = new GirisForm();
             DialogResult dr = frm.ShowDialog();

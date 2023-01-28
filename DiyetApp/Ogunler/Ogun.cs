@@ -10,7 +10,6 @@ namespace DiyetApp.Ogunler
     {
         public int Id { get; set; }
         public string OgunAd { get; set; }
-
         public List<UyeYemek> UyeYemekler { get; set; }
     }
 }

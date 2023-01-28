@@ -280,6 +280,7 @@ namespace DiyetApp
 
         private void btnGeri_Click(object sender, EventArgs e)
         {
+            this.Hide();
             this.Close();
             var frm = new AnaSayfaForm(_db, _uye);
             DialogResult dr = frm.ShowDialog();

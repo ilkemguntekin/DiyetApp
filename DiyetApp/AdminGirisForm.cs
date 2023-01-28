@@ -48,6 +48,7 @@ namespace DiyetApp
 
         private void btnGeri_Click(object sender, EventArgs e)
         {
+            this.Hide();
             this.Close();
             var frm = new GirisForm();
             DialogResult dr = frm.ShowDialog();

@@ -134,6 +134,7 @@ namespace DiyetApp
                         basariliGiris = true;
                         uye = kisi;
 
+                        this.Hide();
                         Form frm = new AnaSayfaForm(db, uye);
                         DialogResult dr = frm.ShowDialog();
                         this.Close();
@@ -152,13 +153,16 @@ namespace DiyetApp
 
         private void btnUnuttum_Click(object sender, EventArgs e)
         {
+            this.Hide();
             var frm = new SifremiUnuttumForm(db);
             DialogResult dr = frm.ShowDialog();
+            
             this.Close();
         }
 
         private void btnAdminGiris_Click(object sender, EventArgs e)
         {
+            this.Hide();
             var frm = new AdminGirisForm(db);
             DialogResult dr = frm.ShowDialog();
             this.Close();
